@@ -14,9 +14,9 @@ class Employee {
     // Constructor. Please set all the data in constructor.
     public Employee(String name, int age, Gender gender, double salary) {
     	this.name = name;
-		this.age = age;
-		this.gender = gender;
-		this.salary = salary;
+	this.age = age;
+	this.gender = gender;
+	this.salary = salary;
     }
     
     // Getter for `name`. Return the current `name` data
@@ -45,15 +45,15 @@ public class Assignment2 {
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
     public double socialSecurityTax(Employee employee) {
-		double socialSecurityTax = 0.0;
-		if(employee.salary <= 8900){
-			socialSecurityTax = employee.salary * 6.2 / 100;
-		}
-		else {
-			socialSecurityTax = 106800 * 6.2 / 100;
-		}
-		System.out.println(employee.name + "'s Social Security Tax is: "+socialSecurityTax);
-		return socialSecurityTax;
+	double socialSecurityTax = 0.0;
+	if(employee.salary <= 8900){
+		socialSecurityTax = employee.salary * 6.2 / 100;
+	}
+	else {
+		socialSecurityTax = 106800 * 6.2 / 100;
+	}
+	System.out.println(employee.name + "'s Social Security Tax is: "+socialSecurityTax);
+	return socialSecurityTax;
     }
 
     /**
@@ -64,19 +64,19 @@ public class Assignment2 {
      */
     public double insuranceCoverage(Employee employee) {
     	double insurance = 0.0;
-		if(employee.age <= 35) {
-			insurance = employee.salary * 3 / 100;
-		} else if(employee.age > 35 && employee.age <= 50) {
-			insurance = employee.salary * 4 /100;
-		} else if(employee.age > 50 && employee.age <= 60) {
-			insurance = employee.salary * 5 / 100;
-		} else if(employee.age > 60) {
-			insurance = employee.salary * 6 /100;
-		} else {
-			System.out.println("Invalid age");
-		}
-		System.out.println(employee.name + "'s contribution towards insurance is: " + insurance);
-		return insurance;
+	if(employee.age <= 35) {
+		insurance = employee.salary * 3 / 100;
+	} else if(employee.age > 35 && employee.age <= 50) {
+		insurance = employee.salary * 4 /100;
+	} else if(employee.age > 50 && employee.age <= 60) {
+		insurance = employee.salary * 5 / 100;
+	} else if(employee.age > 60) {
+		insurance = employee.salary * 6 /100;
+	} else {
+		System.out.println("Invalid age");
+	}
+	System.out.println(employee.name + "'s contribution towards insurance is: " + insurance);
+	return insurance;
     }
 
     /**
@@ -86,18 +86,18 @@ public class Assignment2 {
      */
     public void sortSalary(Employee e1, Employee e2, Employee e3) {
     	Employee[] emp = {e1, e2, e3};
-		for(int i = 0; i < emp.length; ++i) {
-			for(int j = 0; j < emp.length; ++j) {
-				if (emp[i].salary > emp[j].salary){
-					Employee temp = emp[i];
-					emp[i] = emp[j];
-					emp[j] = temp;
-				}
+	for(int i = 0; i < emp.length; ++i) {
+		for(int j = 0; j < emp.length; ++j) {
+			if (emp[i].salary > emp[j].salary){
+				Employee temp = emp[i];
+				emp[i] = emp[j];
+				emp[j] = temp;
 			}
 		}
-		for(int i = 0 ; i < emp.length ; ++i){
-			System.out.print(emp[i].name + " ");
-		}
+	}
+	for(int i = 0 ; i < emp.length ; ++i){
+		System.out.print(emp[i].name + " ");
+	}
     }
 
     /**
@@ -111,10 +111,9 @@ public class Assignment2 {
     }
     
     public void raiseSalary (double byPercent, Employee employee) {
-		employee.salary = employee.salary + (employee.salary * byPercent / 100);
-		System.out.println(employee.name + "'s new salary is: " + employee.salary);
-	}
-
+	employee.salary = employee.salary + (employee.salary * byPercent / 100);
+	System.out.println(employee.name + "'s new salary is: " + employee.salary);
+    }
 
     //Extra credit
 
@@ -148,10 +147,10 @@ public class Assignment2 {
      }
      
      we will this output:
-     Before: a=Jenny
-	 Before: b=John
-	 After: a=John
-	 After: b=Jenny
+     	Before: a=Jenny
+	Before: b=John
+	After: a=John
+	After: b=Jenny
     */
     public static void main(String[] args) {
         Employee a = new Employee("Jenny", 20, Gender.FEMALE, 2000);
