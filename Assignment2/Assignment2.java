@@ -12,6 +12,7 @@ class Employee {
     double salary;// salary per month
 
     // Constructor. Please set all the data in constructor.
+	//score:2/2
     public Employee(String name, int age, Gender gender, double salary) {
     	this.name = name;
 	this.age = age;
@@ -44,6 +45,7 @@ public class Assignment2 {
      * If the salary is less than or equal to 8900, the Social Security Tax is 6.2% of the salary.
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
+	//score:2/2
     public double socialSecurityTax(Employee employee) {
 	double socialSecurityTax = 0.0;
 	if(employee.salary <= 8900){
@@ -62,11 +64,12 @@ public class Assignment2 {
      * If the employee is under 35, rate is 3% of salary; if the employee is between 35 and 50(inclusive), rate is 4% of salary;
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60, rate is 6% of salary.
      */
+	//score:2/2
     public double insuranceCoverage(Employee employee) {
     	double insurance = 0.0;
-	if(employee.age <= 35) {
+	if(employee.age <= 35) { // should be <35 
 		insurance = employee.salary * 3 / 100;
-	} else if(employee.age > 35 && employee.age <= 50) {
+	} else if(employee.age > 35 && employee.age <= 50) {//should be >=35
 		insurance = employee.salary * 4 /100;
 	} else if(employee.age > 50 && employee.age <= 60) {
 		insurance = employee.salary * 5 / 100;
@@ -84,6 +87,7 @@ public class Assignment2 {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
+	//score:2/2
     public void sortSalary(Employee e1, Employee e2, Employee e3) {
     	Employee[] emp = {e1, e2, e3};
 	for(int i = 0; i < emp.length; ++i) {
@@ -106,6 +110,7 @@ public class Assignment2 {
      * Do not change the input of this method.
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
+	//score:2/2
     public void tripleSalary(Employee employee) {
     	this.raiseSalary(300, employee);
     }
@@ -116,7 +121,7 @@ public class Assignment2 {
     }
 
     //Extra credit
-
+//score:2/2
     /**
      * I have written some code below. What I want is to swap two Employee objects.
      * One is Jenny and one is John. But after running it, I got the result below:
