@@ -26,16 +26,16 @@ public class Pet {
 
 	public void setSex(int sexId) {
 		switch(sexId) {
-		case MALE:
+		case 1:
 			sex = "male";
 			break;
-		case FEMALE:
+		case 2:
 			sex = "female";
 			break;
-		case SPAYED:
+		case 3:
 			sex = "spayed";
 			break;
-		case NEUTERED:
+		case 4:
 			sex = "neutered";
 			break;
 		}
